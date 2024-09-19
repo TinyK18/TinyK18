@@ -1,0 +1,351 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - rm -f *.o scrabble
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - scrabble/scrabble
+
+test_00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 00 . scrabble
+
+test_01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 01 . scrabble
+
+test_02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 02 . scrabble
+
+test_03:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 03 . scrabble
+
+test_04:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 04 . scrabble
+
+test_05:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 05 . scrabble
+
+test_06:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 06 . scrabble
+
+test_07:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 07 . scrabble
+
+test_08:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 08 . scrabble
+
+test_09:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 09 . scrabble
+
+test_10:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 10 . scrabble
+
+test_11:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 11 . scrabble
+
+test_12:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 12 . scrabble
+
+test_13:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 13 . scrabble
+
+test_14:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 14 . scrabble
+
+test_15:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 15 . scrabble
+
+test_16:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 16 . scrabble
+
+test_17:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 17 . scrabble
+
+test_18:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 18 . scrabble
+
+test_19:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 19 . scrabble
+
+test_20:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 20 . scrabble
+
+test_21:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 21 . scrabble
+
+test_22:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 22 . scrabble
+
+test_23:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 23 . scrabble
+
+test_24:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 24 . scrabble
+
+test_25:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 25 . scrabble
+
+test_26:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 26 . scrabble
+
+test_27:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 27 . scrabble
+
+test_28:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 28 . scrabble
+
+test_29:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd scrabble
+    - ./tests/test.sh 29 . scrabble
+

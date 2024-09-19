@@ -1,0 +1,82 @@
+GRADE:  50  
+
+Assignment 1 Feedback:
+
+Total Grade: 50  / 50
+
+General Comments:
+Great job on passing all tests. Your code is clean and efficient.
+
+Functionality: 20 / 20
+Passed all tests - excellent functionality.
+
+Solution Quality: 20 / 20
+Correctly implemented, with efficient algorithms.
+
+Code Clarity: 10 / 10
+Well-commented, easy to read, follows guidelines.
+
+Feedback:
+Your approach and coding style are impressive. Keep maintaining this level of clarity and efficiency in your work.
+
+===========================================================
+RUBRICS
+
+Solution Quality 
+----------------
+  (10/10 or 5/5) Excellent Solutions
+  - Program is complete
+  - Algorithm and data structures are appropriate 
+     - marks may be deducted for very inefficient solutions
+  - Variables are properly initialized.
+  - All tests are passing.
+
+  (8/10 or 4/5) Good Solution
+  - Program is complete but may have a minor bug
+  - Algorithm and data structures are appropriate 
+  - Variables are properly initialized.
+  - Nearly all tests are passing.
+
+  (6/10 or 3/5) Marginal Solution
+  - Implementation has major bugs. (Most tests are not passing)
+  - Algorithm and data structures are appropriate 
+
+  (4/10 or 2/5) Poor Solution
+  - Appropriate approach is used by program is incomplete.
+  - Implementation has major flaws.
+
+  (2/10 or 1/5) Very Poor Solution
+  - Attempt has been made
+
+-----------------------------------------------------------
+Code Clarity
+-------------
+  (10/10) Professional looking code should be:
+  - well commented
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+    (prototype declarations are ok)
+
+  (8/10) Code looks good if:
+  - some comments
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+
+  (6/10) Code is mostly readable if
+  - somewhat follows style guidelines
+  - mostly consistent formatting
+  - does not have any function definitions in header files 
+  - marker is having difficulty understanding your code
+
+  (4/10) Code is hard to read if
+  - follows a few of the guidelines
+  - somewhat consistent formatting
+  - has function definitions in header files 
+  - marker can barely understand your code
+
+  (2/10) Code is illegible
+  - code cannot be understood
