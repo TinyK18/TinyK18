@@ -1,0 +1,141 @@
+GRADE:  48 
+
+Assignment 3 Feedback:
+
+Total Grade:  48 / 50
+
+General Comments:
+	Overall, your assignment submission is impressive. Please read my comments below.
+	
+	You showed good understanding of algorithms and memory management 
+  	Needs improvement on code clarity, commenting, and indentation
+	Wish you best for future assignments.
+
+Functionality:  20 / 20
+   Based on the tests form gitlab.
+
+Problem 1 Solution Quality:  10 / 10
+    See rubric below.
+
+Problem 2 Solution Quality:  10 / 10
+    See rubric below.
+
+Comments:
+	Problem 1:
+		Overlap:
+			Your solution is efficient with use of minimal logic. 10 out of 10 :)
+		Splice:
+			Great
+	Problem 2:
+		The solution is efficient and passes all the test cases.
+		You have shown a good understanding of pointers and memory
+		allocation with garbage collection when needed. 
+		Keep it up!
+
+Code Clarity:  8 / 10
+    See rubric below.
+
+Comments: 
+	The code is well-commenting but it is not indented properly at many places in the code
+	Your comments are also not placed properly and a many places (e,g xintongw/splicer/main.c line 82)
+	Remember code clarity is almost as important as functionality so make sure to take some time in writing
+	good comments, and properly indenting your code
+
+	If you use C-Lion, there is a shortcut to auto-format your code.
+	If you use VSCode, download extensions for auto-formatting C code.
+	There is a way to do it in Vim, but it requires additional setup.
+
+  	The setup is worth the time investment ^
+
+	Great job, please keep it up!
+
+===========================================================
+RUBRICS
+
+Solution Quality Problem 1
+--------------------------
+  (10/10) Excellent Solutions
+  - overlap() is implemented correctly
+  - splice() is implemented correctly
+  - splice() is implemented efficiently
+    - no unnecessary loops
+
+  (8/10) Good Solution
+  - overlap() is implemented correctly
+  - splice() is implemented correctly
+
+  (6/10) Marginal Solution
+  - overlap() is implemented correctly
+  - splice() has bugs.
+
+  (4/10) Poor Solution
+  - Both overlap() and splice() have bugs
+
+  (2/10) Very Poor Solution
+  - Attempt has been made
+
+
+Solution Quality Problem 2
+--------------------------
+  (10/10) Excellent Solutions
+  - Arrays are not used except to store individual words
+  - Linked lists are used to store segments
+  - Algorithm is efficiently implemented
+    - no unneccessary loops.
+  - Memory is properly freed
+  - Program is correct
+  - All tests are passing
+
+  (8/10) Good Solution
+  - Arrays are not used except to store individual words
+  - Linked lists are used to store segments
+  - Program is correct
+  - All tests are passing
+
+  (6/10) Marginal Solution
+  - Arrays are not used except to store individual words
+  - Linked lists are used to store segments
+  - Minor bugs (some of the tests are passing)
+
+  (4/10) Poor Solution
+  - Arrays are not used except to store individual words
+  - Linked lists are used to store segments
+  - Major flaws / bugs in program
+  - Most tests are not passing
+
+  (2/10) Very Poor Solution
+  - Attempt has been made
+
+-----------------------------------------------------------
+Code Clarity
+-------------
+  (10/10) Professional looking code should be:
+  - well commented
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+    (prototype declarations are ok)
+
+  (8/10) Code looks good if:
+  - some comments
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+
+  (6/10) Code is mostly readable if
+  - somewhat follows style guidelines
+  - mostly consistent formatting
+  - does not have any function definitions in header files 
+  - marker is having difficulty understanding your code
+
+  (4/10) Code is hard to read if
+  - follows a few of the guidelines
+  - somewhat consistent formatting
+  - has function definitions in header files 
+  - marker can barely understand your code
+
+  (2/10) Code is illegible
+  - code cannot be understood
+

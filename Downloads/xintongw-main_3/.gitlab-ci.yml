@@ -1,0 +1,296 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build_1:
+  tags:
+    - ugrad
+  stage: build
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd linked_list
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make 
+  artifacts:
+    paths:
+      - linked_list/linked_list
+  allow_failure: true
+
+build_2:
+  tags:
+    - ugrad
+  stage: build
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  script:
+    - cd splicer
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make 
+  artifacts:
+    paths:
+      - splicer/splicer
+  allow_failure: true
+
+test_1_00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 00 . linked_list
+
+test_1_01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 01 . linked_list
+
+test_1_02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 02 . linked_list
+
+test_1_03:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 03 . linked_list
+
+test_1_04:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 04 . linked_list
+
+test_1_05:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 05 . linked_list
+
+test_1_06:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 06 . linked_list
+
+test_1_07:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 07 . linked_list
+
+test_1_08:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 08 . linked_list
+
+test_1_09:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_1
+  script:
+    - cd linked_list
+    - ./tests/test.sh 09 . linked_list
+
+test_2_00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 00 . splicer
+
+test_2_01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 01 . splicer
+
+test_2_02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 02 . splicer
+
+test_2_03:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 03 . splicer
+
+test_2_04:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 04 . splicer
+
+test_2_05:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 05 . splicer
+
+test_2_06:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 06 . splicer
+
+test_2_07:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 07 . splicer
+
+test_2_08:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 08 . splicer
+
+test_2_09:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOTEST/
+  dependencies:
+    - build_2
+  script:
+    - cd splicer
+    - ./tests/test.sh 09 . splicer
