@@ -1,0 +1,123 @@
+GRADE: 33
+
+Assignment 5 Feedback:
+
+Total Grade:  33 / 50
+
+General Comments:
+
+
+Functionality:  18 / 20
+   Based on the tests form gitlab.
+
+Performance:  0 / 10
+   Based on the bench form gitlab.
+   See rubric below.
+
+Problem 1 Solution Quality:  7 / 10
+    See rubric below.
+
+Comments:
+- Bench test not running properly due to print statements.
+- Number of cache lines should be calculated by taking into account the memory needed to store the struct cache metadata.
+
+Code Clarity:      8 / 10
+    See rubric below.
+
+Comments: 
+- Inconsistent formatting
+
+
+===========================================================
+RUBRICS
+
+Solution Quality 
+----------------
+  (10/10) Excellent Solutions
+  - Implementation is correct.
+  - All tests pass.
+  - Code is efficient.
+  - Code uses most of the F_memory
+
+  (8/10) Good Solution
+  - Implementation is correct
+  - All tests or nearly all tests pass
+  - Little or no error checking is done.  Code is not robust.
+  - Code does not use most of F_memory 
+    (cache only uses less than half of F_Memory)
+
+  (6/10) Marginal Solution
+  - Minor issues
+  - Some tests pass, or would with a minor fix
+
+  (4/10) Poor Solution
+  - Major flaws in implementation
+  - No tests pass and none would without some corrections
+
+  (2/10) Very Poor Solution
+  - Attempt has been made
+
+-----------------------------------------------------------
+
+Performance
+-----------
+Formula:
+  Student_HR = SUM(Student Hit Rates) / 5
+  Expected_HR = SUM(Expected Hit Rates) / 5
+  DIFF = 100 * (Expected_HR - Student_HR) / Expected_HR
+
+  (10/10) Excellent Performance
+  - All hit-rates meet or exceed the expected ones.
+
+  (9/10) Very Good Performance
+  - All but hit-rate meet or exceed the expected ones
+
+  (8/10) Good Performance
+  - On average hit-rates are 80% or more of expected
+  - DIFF <= 20
+
+  (6/10) Marginal Performance
+  - On average hit-rates are 60% or more of expected
+  - DIFF <= 40
+
+  (4/10) Poor Performance
+  - On average hit-rates are 40% or more of expected
+  - DIFF <= 60
+
+  (2/10) Very Poor Performance
+  - On average hit-rates are 20% or more of expected
+  - DIFF <= 80
+
+
+-----------------------------------------------------------
+Code Clarity
+-------------
+  (10/10) Professional looking code should be:
+  - well commented
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+    (prototype declarations are ok)
+
+  (8/10) Code looks good if:
+  - some comments
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+
+  (6/10) Code is mostly readable if
+  - somewhat follows style guidelines
+  - mostly consistent formatting
+  - does not have any function definitions in header files 
+  - marker is having difficulty understanding your code
+
+  (4/10) Code is hard to read if
+  - follows a few of the guidelines
+  - somewhat consistent formatting
+  - has function definitions in header files 
+  - marker can barely understand your code
+
+  (2/10) Code is illegible
+  - code cannot be understood
