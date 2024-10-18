@@ -1,0 +1,32 @@
+Title:Lexical Scanner for a Custom Programming Language(including Json)
+Name: Kenina Wang
+Student Number: B00956129
+Course Number: CSCI2115
+
+Reflection：
+The smooth part:
+The coding of TokenType and Token class was smooth, and the code was able to output the correct Token.
+The code was able to correctly identify and parse different elements in JSON, such as arrays, dictionaries,
+numbers, strings, etc. Using the DFA model to parse these tokens was a good choice, especially after
+improving the code for handling strings surrounded by single and double quotes. In addition, using a
+custom exception LexerError to handle invalid input or unmatched quotes can provide clear error
+messages to verify the input
+
+Challenges encountered:
+At the beginning of the project, string handling was a prominent issue. The isalnum() function was too
+strict because strings in JSON can contain more than just letters and numbers. Therefore, additional
+conditions were needed to identify strings, and I spent a lot of time adjusting this part of the code
+during debugging. Another problem was that the initial error handling logic failed to properly detect the
+mismatched quotes. These challenges made me realize that I need to consider possible edge cases more
+during the design phase.
+
+What I would do again:
+I would pay more attention to the detailed planning of DFA design before coding. A more comprehensive initial
+design can help me avoid some problems in string parsing and error handling. In addition, I would focus on
+detecting the edge cases of String Token in the early stage of coding, which can save a lot of time in the
+subsequent debugging stage. Another area I would improve would be to add support for JSON-specific features,
+such as handling escape sequences in strings (e.g., \"). This would make the lexer more robust.
+
+Overall, this project reinforced the importance of formal language theory in practice, and the challenges
+I encountered in the project also gave me a deeper understanding of how lexical analyzers work in real-world
+programming languages ​​and data formats.

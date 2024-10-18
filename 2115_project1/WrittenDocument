@@ -1,0 +1,96 @@
+Title:Lexical Scanner for a Custom Programming Language(including Json)
+Name: Kenina Wang
+Student Number: B00956129
+Course Number: CSCI2115
+
+Language Description:
+The lexical analyzer (Scanner) is used to parse a custom programming language
+(including Json), which contains the following structures and grammatical elements:
+
+-Arithmetic Operators for performing arithmetic operations: +, -, *, /
+-Numbers: Integers and floating point numbers (support scientific notation, such as 2e+3).
+For example: 123, 3.14, 1e+5
+-Strings: Strings are enclosed in double quotes or single quotes.
+For example: "hello", 'world'
+-Parentheses: (, ),Used to indicate the grouping of expressions.
+-Brackets: [, ],Used to define lists or arrays.
+-Braces: {, },Used to define dictionaries or block structures.
+-Comma: , ,Used to separate items in a list.
+-Colon: : ,Used for key-value pairs in dictionaries.
+-EOF: A marker indicating the end of input
+Token Type:
+    LPAREN  => ’( ’
+    RPAREN  => ’) ’
+    COMMA =>  ’,’
+    COLON =>  ’: ’
+    SEMICOLON => ’; ’
+    STRING => Characters
+    NUMBER =>  numbers
+    EOF => End of inpu\
+    PLUS => '+'
+    MINUS => '-'
+    MULTIPLY => '*'
+    DIVIDE => '/'
+    LBRACKET => '['
+    RBRACKET => ']'
+    LBRACE => '{'
+    RBRACE => '}'
+    Booleans => true/false
+    Empty => "null"
+
+Json Tokens:
+Objects: Use curly braces {} to indicate a set of key-value pairs. Example input: {"name": "John", "age": 30}
+Arrays: Use square brackets [] to indicate a set of key-value pairs. Example input: ["apple", "banana", "cherry"]
+Numbers: Support integers, floating point numbers, and numbers in scientific notation format. Example input: 123, 3.14, 2e+5
+Strings: Can be input in single quotes and double quotes. Example input: "hello", 'hello'
+Punctuation: Punctuation used in JSON includes {, }, [, ], ,, :.
+Booleans: true and false are Boolean values in JSON. Example input: "true", "TRUE"
+Null: Use null to indicate a null value. Example input: "null"
+
+DFA Design:
+The lexer implements a deterministic finite automaton (DFA),
+and each state in the DFA is used to parse a different part of JSON,
+such as objects, arrays, strings, numbers, etc.
+-When the scanner encounters {, }, [, ], ,, :, +, -, /, *, (,), ;, it directly generates the corresponding Token.
+-When encountering letters, it enters the string state.
+-When encountering numeric characters, it enters the numeric state.
+-When encountering true or false, it generates the corresponding Boolean value.
+-When encountering null, it generates a null value
+-Blank characters are skipped by skip_space().
+-Numbers are parsed by the recognize_num() method.
+-Strings are parsed by the recognize_str() method.
+
+State transition：
+    q0 -(-> LPAREN Token
+    q0 -)-> RPAREN Token
+    q0 -{-> LBRACE Token
+    q0 -}-> RBRACE Token
+    q0 -,-> COMMA Token
+    q0 -:-> COLON Token
+    q0 -;-> SEMICOLON Token
+    q0 -string-> STRING Token
+    q0 -number-> NUMBER Token
+    q0 -+-> PLUS Token
+    q0 ---> MINUS Token
+    q0 -*-> MULTIPLY Token
+    q0 -/-> DIVIDE Token
+    q0 -true/false-> Booleans Token
+    q0 -[-> LBRACKET Token
+    q0 -]-> RBRACKET Token
+    q0 -"null"-> EMPTY Token
+
+Code Explanation:
+Implemented by the getNextToken() method of the Scanner class.
+
+-Number parsing:Numbers are parsed by the recognize_num() method.
+Supporting integers, floating point numbers, and scientific notation numbers
+-String parsing:Strings in single and double quotes ' " are recognized by
+the recognize_str() method
+-Parsing of objects and arrays:When the scanner encounters {, }, [, ], LBRACE, RBRACE,
+LBRACKET, and RBRACKET Tokens are directly generated.
+-Parsing of true, false, and null:That is achieved by matching the string in
+single and double quotes.
+
+
+
+
